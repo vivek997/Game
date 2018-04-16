@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+body {
+    background: url(../images/map3.jpg);
+    width: auto;
+}
+
+.u-full-width {
+  width: 100%;
+  display: block;
+}
+
+#back {
+  visibility: hidden;
+  display: none;
+}
+
+h1, h2, h3{
+    color: white;
+}
+
+#front_text{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 2.7em;
+}
+
+
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #40220A;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #5F3F2A;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #40220A;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+

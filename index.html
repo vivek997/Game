@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Cloud Effect</title>
+         <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+          <!--======================================================-->
+         <link rel="stylesheet" type="text/css" href="css/design.css">
+         <!--======================================================-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+          <!--======================================================-->
+         
+    </head>
+    <body>
+       <div id="container">
+<!--        <img id="back" width="100%" height="auto" src="https://lauracampbell89.files.wordpress.com/2014/12/e0bf35_1da77d8cc72b4028a5c0a40e8944884b.jpg" />-->
+
+      <h1 id="front_text" class="text-center">Game Time</h1><br/>
+      
+ 
+<h3 id="front_text" class="text-center">You want to play this game...</h3>
+
+<h3 id="front_text" class="text-center">If you start the game you can't quit...</h3><br/>
+<center>
+ <button type="button" class="btn btn-primary" onclick="login();"><i class="fas fa-sign-in-alt"></i> Let's Play</button>
+  </center>
+  
+  </div>
+  <!--======================================================-->
+
+   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDyAR6nMgkMHCtISvLGXQHGxk_Wnhd8hNk",
+    authDomain: "read-write-data.firebaseapp.com",
+    databaseURL: "https://read-write-data.firebaseio.com",
+    projectId: "read-write-data",
+    storageBucket: "read-write-data.appspot.com",
+    messagingSenderId: "478998943110"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- ================================================== -->
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="js/login_script.js"></script>
+
+   <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
