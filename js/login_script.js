@@ -8,7 +8,7 @@ function login(){
     function newLoginHappened(user){
         if (user){
             //user is signed in
-            app(user);
+            showWelcomeContainer();
         }
         else{
             var provider = new firebase.auth.GoogleAuthProvider();
@@ -37,8 +37,5 @@ firebase.auth().signOut().then(function() {
 });
 };
 
-function app(user){
-    document.getElementById("clientName").innerHTML = user.displayName;
-}
 
 
