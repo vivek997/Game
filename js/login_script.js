@@ -1,31 +1,20 @@
-
 var provider = new firebase.auth.GoogleAuthProvider();
 var user;
 
+
 $( document ).ready(function() {
 	$("#welcome").hide();
+	$("#uploadButton").hide();
 });
 
-function login(){
-//    function newLoginHappened(user){
-//        if (user){
-//            //user is signed in
-//            showWelcomeContainer();
-//        }
-//        else{
-//            var provider = new firebase.auth.GoogleAuthProvider();
-//            firebase.auth().signInWithRedirect(provider);
-//        }
-//    }
-//    
-//    firebase.auth().onAuthStateChanged(newLoginHappened);
-    
-    firebase.auth().signInWithPopup(provider).then(function(result) {
+function signIn() {
+	firebase.auth().signInWithPopup(provider).then(function(result) {
 	  // This gives you a Google Access Token. You can use it to access the Google API.
-	  var token = result.credential.accessToken;
+	  var token = result.user.uid;
 	  // The signed-in user info.
 	  user = result.user;
 	  showWelcomeContainer();
+	  sessionStorage.token = token;
 	  // ...
 	}).catch(function(error) {
 	  // Handle Errors here.
@@ -37,12 +26,7 @@ function login(){
 	  var credential = error.credential;
 	  // ...
 	});
-    
-    
-    
-    
-    
-    
+
 };
 
 function showWelcomeContainer() {
@@ -50,7 +34,6 @@ function showWelcomeContainer() {
 	$("#welcome").show();
 	$("#welcomeText").html("Hello, " + user.displayName);
 };
-
 
 
 function signout(){
@@ -63,5 +46,19 @@ firebase.auth().signOut().then(function() {
 });
 };
 
+
+
+//    function newLoginHappened(user){
+//        if (user){
+//            //user is signed in
+//            showWelcomeContainer();
+//        }
+//        else{
+//            var provider = new firebase.auth.GoogleAuthProvider();
+//            firebase.auth().signInWithRedirect(provider);
+//        }
+//    }
+//    
+//    firebase.auth().onAuthStateChanged(newLoginHappened);
 
 
