@@ -1,3 +1,9 @@
+$( document ).ready(function() {
+	$("#welcome").hide();
+});
+
+
+
 function login(){
     function newLoginHappened(user){
         if (user){
@@ -12,6 +18,14 @@ function login(){
     
     firebase.auth().onAuthStateChanged(newLoginHappened);
 };
+
+function showWelcomeContainer() {
+	$("#login").hide();
+	$("#welcome").show();
+	$("#welcomeText").html("Hello, " + user.displayName);
+};
+
+
 
 function signout(){
 firebase.auth().signOut().then(function() {
