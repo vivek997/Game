@@ -4,7 +4,6 @@ var user;
 
 $( document ).ready(function() {
 	$("#welcome").hide();
-	$("#uploadButton").hide();
 });
 
 function signIn() {
@@ -32,7 +31,6 @@ function signIn() {
 function showWelcomeContainer() {
 	$("#login").hide();
 	$("#welcome").show();
-    $("#uploadButton").show();
 	$("#welcomeText").html("Hello, " + user.displayName);
 };
 
