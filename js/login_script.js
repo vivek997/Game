@@ -36,14 +36,8 @@ function showWelcomeContainer() {
 
 
 function signout(){
-firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-    console.log('SignOut Succesfull');
-}).catch(function(error) {
-  // An error happened.
-    console.log('SignOut Failed');
-});
-};
+firebase.auth().signOut();
+}
 
 
 
