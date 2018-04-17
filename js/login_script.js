@@ -1,12 +1,13 @@
+var user;
 
-$( document ).ready(function() {
-	$("#user_div").hide();
-});
 
 function signIn() {
      function newLoginHappened(user){
         if (user){
             //user is signed in
+            $( document ).ready(function() {
+	        $("#user_div").hide();
+            });
             showWelcomeContainer();
         }
         else{
