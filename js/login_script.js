@@ -10,6 +10,7 @@ function signIn() {
             showWelcomeContainer();
         }
         else{
+            $("#user_div").hide();
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithRedirect(provider);
         }
