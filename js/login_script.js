@@ -1,31 +1,56 @@
-var user;
-//$( document ).ready(function() {
-//	$("#user_div").hide();
-//});
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+
+    document.getElementById("user_div").style.display = "block";
+    document.getElementById("login_div").style.display = "none";
+
+    var user = firebase.auth().currentUser;
+
+    if(user != null){
+        
+      document.getElementById("welcomeText").innerHTML = "Welcome : " + user.displayName;
+
+    }
+
+  } else {
+    // No user is signed in.
+
+    document.getElementById("user_div").style.display = "none";
+    document.getElementById("login_div").style.display = "block";
+
+  }
+});
+
+
 
 function signIn() {
-     function newLoginHappened(user){
-        if (user){
-            //user is signed in
-            showWelcomeContainer();
-        }
-        else{
-            $("#user_div").hide();
-            var provider = new firebase.auth.GoogleAuthProvider();
-            firebase.auth().signInWithRedirect(provider);
-        }
-    }
     
-    firebase.auth().onAuthStateChanged(newLoginHappened);
+    var provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithRedirect(provider);
+    
+//     function newLoginHappened(user){
+//        if (user){
+//            //user is signed in
+//            showWelcomeContainer();
+//        }
+//        else{
+//            $("#user_div").hide();
+//            var provider = new firebase.auth.GoogleAuthProvider();
+//            firebase.auth().signInWithRedirect(provider);
+//        }
+//    }
+//    
+//    firebase.auth().onAuthStateChanged(newLoginHappened);
 	
 
 };
 
-function showWelcomeContainer() {
-	$("#login_div").hide();
-	$("#user_div").show();
-	$("#welcomeText").html("Hello, " + user.displayName);
-};
+//function showWelcomeContainer() {
+//	$("#login_div").hide();
+//	$("#user_div").show();
+//	$("#welcomeText").html("Hello, " + user.displayName);
+//};
 
 
 function signout(){
