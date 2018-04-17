@@ -31,7 +31,14 @@
   <div id="user_div" class="container">
      
       <button type="button" id="uploadButton" class="btn btn-primary" onclick="signout();"><i class="fas fa-sign-out-alt"></i>Log-out</button>
-      <div class="container">
+      
+          
+          <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">   
+       <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="active item">
+               <!-- ================== -->
+                <div class="container">
       <div class="jumbotron">
          <h2 class="text-center" id="welcomeText"></h2>
          
@@ -42,14 +49,71 @@
     <li class="list-group-item">3. Third Instruction</li>
   </ul>
          <div class="buttons" style="font-size:2em;">
-			<a class="facebook" href=""><i class="fas fa-angle-right" id="continue-icon"></i></a>
+			<a class="facebook" href="#myCarousel" data-slide="next"><i class="fas fa-angle-right" id="continue-icon"></i></a>
 		</div>
          
           </div>
           </div>
+            <!-- ================== -->
+            </div>
+            <div class="item">
+                <!-- ================== -->
+                <div class="container">
+      <div class="jumbotron">
+         
+         <h3 class="text-center text-success">Second</h3>
+         <ul class="list-group">
+    <li class="list-group-item">1. First Instruction</li>
+    <li class="list-group-item">2. Second Instruction</li>
+    <li class="list-group-item">3. Third Instruction</li>
+  </ul>
+         <div class="buttons" style="font-size:2em;">
+			<a class="facebook" href="#myCarousel" data-slide="next"><i class="fas fa-angle-right" id="continue-icon"></i></a>
+		</div>
+         
+          </div>
+          </div>
+            <!-- ================== -->
+            </div>
+            <div class="item">
+                <!-- ================== -->
+                <div class="container">
+      <div class="jumbotron">
+         
+         <h3 class="text-center text-success">Third</h3>
+         <ul class="list-group">
+    <li class="list-group-item">1. First Instruction</li>
+    <li class="list-group-item">2. Second Instruction</li>
+    <li class="list-group-item">3. Third Instruction</li>
+  </ul>
+         <div class="buttons" style="font-size:2em;">
+			<a class="facebook disabled" href="#myCarousel" data-slide="next"><i class="fas fa-angle-right" id="continue-icon"></i></a>
+		</div>
+         
+          </div>
+          </div>
+            <!-- ================== -->
+            </div>
+        </div>
+        
+    </div>
+
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
   </div><!--user_div End-->
   <!--======================================================-->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -62,11 +126,22 @@
     messagingSenderId: "478998943110"
   };
   firebase.initializeApp(config);
+    <!-- ================================================== --> 
+        
+    $(document).ready(function(){
+	$("#myCarousel").carousel({
+		interval : false,
+        wrap: false
+	});
+});
+
+   <!-- ================================================== -->  
+    
 </script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <!-- ================================================== -->
  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
 
   <script type="text/javascript" src="js/login_script.js"></script>
 
