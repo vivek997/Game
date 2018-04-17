@@ -6,6 +6,8 @@
           <!--======================================================-->
          <link rel="stylesheet" type="text/css" href="css/design.css">
          <!--======================================================-->
+          <link rel="stylesheet" type="text/css" href="css/button_style.css">
+         <!--======================================================-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
           <!--======================================================-->
          
@@ -28,16 +30,24 @@
   <!--======================================================-->
   <div id="user_div" class="container">
      
-     <h2 id="welcomeText"></h2>
-      <button type="button" id="uploadButton" class="btn btn-primary" onclick="signout();">Log-out</button>
+      <button type="button" id="uploadButton" class="btn btn-primary" onclick="signout();"><i class="fas fa-sign-out-alt"></i>Log-out</button>
       <div class="container">
-  <div class="jumbotron">
+      <div class="jumbotron">
          <h2 class="text-center" id="welcomeText"></h2>
-          </div></div>
-      
-      
-      
-  </div>
+         
+         <h3 class="text-center text-success">Instruction</h3>
+         <ul class="list-group">
+    <li class="list-group-item">1. First Instruction</li>
+    <li class="list-group-item">2. Second Instruction</li>
+    <li class="list-group-item">3. Third Instruction</li>
+  </ul>
+         <div class="buttons" style="font-size:2em;">
+			<a class="facebook" href=""><i class="fas fa-angle-right" id="continue-icon"></i></a>
+		</div>
+         
+          </div>
+          </div>
+  </div><!--user_div End-->
   <!--======================================================-->
 
    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
