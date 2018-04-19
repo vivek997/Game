@@ -6,6 +6,8 @@
           <!--======================================================-->
          <link rel="stylesheet" type="text/css" href="css/design.css">
          <!--======================================================-->
+         <link rel="stylesheet" type="text/css" href="css/jquery.toastmessage-min.css">
+         <!--======================================================-->
           <link rel="stylesheet" type="text/css" href="css/button_style.css">
          <!--======================================================-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -23,12 +25,14 @@
 
 <h3 id="front_text" class="text-center">If you start the game you can't quit...</h3><br/>
 <center>
- <button type="button" class="btn btn-primary" onclick="signIn();"><i class="fas fa-sign-in-alt"></i> Let's Play</button>
+ <button type="button" class="btn btn-primary" href="javascript:toast();" onclick="signIn();"><i class="fas fa-sign-in-alt"></i> Let's Play</button>
   </center>
   
   </div>
   <!--======================================================-->
   <div id="user_div" class="container">
+     
+     <div id="toast"></div>
      
       <button type="button" id="uploadButton" class="btn btn-primary" onclick="signout();"><i class="fas fa-sign-out-alt"></i>Log-out</button>
       
@@ -87,7 +91,7 @@
     <li class="list-group-item">3. Third Instruction</li>
   </ul>
          <div class="buttons" style="font-size:2em;">
-			<a class="facebook" href="#myCarousel" data-slide="next"><i class="fas fa-angle-right" id="continue-icon"></i></a>
+			<a class="facebook disabled" href="#myCarousel" data-slide="next"><i class="fas fa-angle-right" id="continue-icon"></i></a>
 		</div>
          
           </div>
@@ -112,9 +116,15 @@
           
           
   </div><!--user_div End-->
-  <!--======================================================-->
+  <!-- ================================================== -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--======================================================-->
+  <script src="js/jquery.toastmessage-min.js"></script>
+<!-- ================================================== -->
+ <script src="js/toast_msg_call.js"></script>
+  <!-- ================================================== -->
    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+   <!-- ================================================== -->
 <script>
   // Initialize Firebase
   var config = {
@@ -135,16 +145,17 @@
 	});
 });
 
+    function toast(){
+    $('#toast').html(showSuccessToast());
+        }
    <!-- ================================================== -->  
     
 </script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <!-- ================================================== -->
  
-  
-
-  <script type="text/javascript" src="js/login_script.js"></script>
-
+<!--  <script type="text/javascript" src="js/login_script.js"></script>-->
+<!-- ================================================== -->
    <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
