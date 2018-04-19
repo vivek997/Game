@@ -145,9 +145,12 @@
 	});
 });
 
-    function toast(){
-    $('#toast').html(showSuccessToast());
-        }
+  function toast(){
+setTimeout(function() {
+   $('#toast').html(showSuccessToast());
+
+}, 5000); 
+  }
    <!-- ================================================== -->  
     
 </script>
